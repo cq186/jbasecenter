@@ -1,1 +1,1 @@
-include ':app', ':livebase'
+include ':app', ':livebase', ':editbase', ':sharesdk'

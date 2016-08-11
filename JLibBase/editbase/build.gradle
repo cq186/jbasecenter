@@ -1,20 +1,14 @@
 apply plugin: 'com.android.library'
-
-//jar
-//apply plugin: 'com.github.dcendents.android-maven'
-//group='com.github.jlivebase'
-
 // 根节点添加 aar
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-group = 'com.jian.rlivebase'
+group = 'com.jian.reditbase'
 // 根节点添加
-version = "0.3.4"
+version = "0.0.2"
 
 
 def siteUrl = 'https://github.com/guojian0822jian/jbasecenter'    // project homepage
 def gitUrl = 'https://github.com/guojian0822jian/jbasecenter.git'
-
 
 android {
     compileSdkVersion 23
@@ -33,6 +27,14 @@ android {
         }
     }
 }
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+}
+
 // 根节点添加
 install {
     repositories.mavenInstaller {
@@ -40,7 +42,7 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'liveBaseSupport'
+                name 'editSupport'
                 url siteUrl
                 licenses {
                     license {
@@ -65,14 +67,6 @@ install {
     }
 }
 
-
-
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
-}
 // build a jar with source files
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -103,7 +97,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "livebase"
+        name = "editbase"
 //        desc = "test jctenerlib"	//项目描述
         // project name in jcenter
         websiteUrl = siteUrl
@@ -115,12 +109,3 @@ bintray {
 //        publicDownloadNumbers = true
     }
 }
-//apply plugin: 'maven'
-
-//ext {
-//    PUBLISH_GROUP_ID = 'com.jian.livesdk'
-//    PUBLISH_ARTIFACT_ID = 'livebase'
-//    PUBLISH_VERSION = '1.0'
-//}
-//
-//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

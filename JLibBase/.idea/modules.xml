@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JLibBase.iml" filepath="$PROJECT_DIR$/JLibBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/editbase/editbase.iml" filepath="$PROJECT_DIR$/editbase/editbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/livebase/livebase.iml" filepath="$PROJECT_DIR$/livebase/livebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/sharesdk/sharesdk.iml" />
     </modules>
   </component>
 </project>
