@@ -7,13 +7,13 @@ apply plugin: 'com.android.library'
 // 根节点添加 aar
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-group = 'com.jian.rlivebase'
+group = 'com.jian.jlivebase'
 // 根节点添加
-version = "0.3.4"
+version = "0.4.1"
 
 
-def siteUrl = 'https://github.com/guojian0822jian/jbasecenter'    // project homepage
-def gitUrl = 'https://github.com/guojian0822jian/jbasecenter.git'
+//def siteUrl = 'https://github.com/guojian0822jian/jbasecenter'    // project homepage
+//def gitUrl = 'https://github.com/guojian0822jian/jbasecenter.git'
 
 
 android {
@@ -103,8 +103,8 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "livebase"
-//        desc = "test jctenerlib"	//项目描述
+        name = "jmlivebase"
+        desc = "test jctenerlib"	//项目描述
         // project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl
